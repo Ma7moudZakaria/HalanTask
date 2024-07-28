@@ -1,0 +1,15 @@
+<!-- <div *ngFor="let ticket of tickets | paginate: { itemsPerPage: 5, currentPage: page }">
+  <div [ngClass]="getColorClass(ticket.creationDate)">
+    {{ ticket.phoneNumber }} - {{ ticket.governorate }} - {{ ticket.city }} - {{ ticket.district }}
+    <button *ngIf="!ticket.isHandled" (click)="handleTicket(ticket.id)">Handle</button>
+  </div>
+</div>
+<pagination-controls (pageChange)="page = $event"></pagination-controls> -->
+
+<div *ngFor="let ticket of tickets | paginate: { itemsPerPage: 5, currentPage: page }">
+  <div [ngClass]="getColorClass(ticket.createdDate)">
+    {{ ticket.phoneNumber }} - {{ ticket.governorate }} - {{ ticket.city }} - {{ ticket.district }}
+    <button *ngIf="!ticket.isHandled" (click)="handleTicket(ticket.id)">Handle</button>
+  </div>
+</div>
+<pagination-controls (pageChange)="page = $event"></pagination-controls>
